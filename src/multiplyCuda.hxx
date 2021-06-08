@@ -29,18 +29,20 @@ float multiplyCuda(T *a, const T *x, const T *y, int N, const MultiplyOptions& o
   int G = min(ceilDiv(N, B), o.gridLimit);
   size_t N1 = N * sizeof(T);
 
-  T *xD, *yD;
+  T *aD, *xD, *yD;
+  TRY( cudaMalloc(&aD, N1) );
   TRY( cudaMalloc(&xD, N1) );
   TRY( cudaMalloc(&yD, N1) );
   TRY( cudaMemcpy(xD, x, N1, cudaMemcpyHostToDevice) );
   TRY( cudaMemcpy(yD, y, N1, cudaMemcpyHostToDevice) );
 
   float t = measureDuration([&] {
-    multiplyKernel<<<G, B>>>(xD, xD, yD, N);
-    TRY( cudaDeviceSynchronize(); );
+    multiplyKernel<<<G, B>>>(aD, xD, yD, N);
+    TRY( cudaDeviceSynchronize() );
   }, o.repeat);
-  TRY( cudaMemcpy(a, xD, N1, cudaMemcpyDeviceToHost) );
+  TRY( cudaMemcpy(a, aD, N1, cudaMemcpyDeviceToHost) );
 
+  TRY( cudaFree(aD) );
   TRY( cudaFree(xD) );
   TRY( cudaFree(yD) );
   return t;
