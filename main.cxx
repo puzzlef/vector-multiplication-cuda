@@ -17,12 +17,16 @@ void runMultiply(int N) {
   }
 
   // Find x*y using a single thread.
-  double t1 = measureDuration([&]() { multiply(a1, x, y); }, repeat);
-  printf("[%09.3f ms; %.0e elems.] [%f] multiply\n", t1, (double) N, sum(a1));
+  float t1 = multiplySeq(a1, x, y, {repeat});
+  printf("[%09.3f ms; %.0e elems.] [%f] multiplySeq\n", t1, (double) N, sum(a1));
 
-  // Find x*y accelerated using OpenMP.
-  double t2 = measureDuration([&]() { multiplyOmp(a2, x, y); }, repeat);
-  printf("[%09.3f ms; %.0e elems.] [%f] multiplyOmp\n", t2, (double) N, sum(a2));
+  // Find x*y accelerated using CUDA.
+  for (int grid=1024; grid<=GRID_LIMIT; grid*=2) {
+    for (int block=32; block<=BLOCK_LIMIT; block*=2) {
+      float t2 = multiplyCuda(a2, x, y, {repeat, grid, block});
+      printf("[%09.3f ms; %.0e elems.] [%f] multiplyCuda<<<%d, %d>>>\n", t1, (double) N, sum(a1), grid, block);
+    }
+  }
 }
 
 
