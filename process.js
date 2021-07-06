@@ -99,8 +99,8 @@ function main(cmd, log, out) {
       writeCsv(out, rows);
       break;
     case 'csv-dir':
-      for (var [graph, rows] of data)
-        writeCsv(path.join(out, graph+'.csv'), rows);
+      for (var [elements, rows] of data)
+        writeCsv(path.join(out, elements+'.csv'), rows);
       break;
     default:
       console.error(`error: "${cmd}"?`);
