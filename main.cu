@@ -1,4 +1,5 @@
 #include <vector>
+#include <string>
 #include <cstdio>
 #include "src/main.hxx"
 
@@ -7,8 +8,7 @@ using namespace std;
 
 
 
-void runMultiply(int N) {
-  int repeat = 5;
+void runMultiply(int N, int repeat) {
   vector<float> a1(N), a2(N);
   vector<float> x(N), y(N);
   for (int i=0; i<N; i++) {
@@ -31,9 +31,10 @@ void runMultiply(int N) {
 
 
 int main(int argc, char **argv) {
+  int repeat = argc>1? stoi(argv[1]) : 5;
   for (int n=1000000; n<=1000000000; n*=10) {
     printf("# Elements %.0e\n", (double) n);
-    runMultiply(n);
+    runMultiply(n, repeat);
     printf("\n");
   }
   return 0;
