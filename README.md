@@ -8,7 +8,9 @@ operation. Using a **large** `grid_limit` and a `block_size` of **256** could
 be a decent choice.
 
 All outputs are saved in [out](out/) and a small part of the output is listed
-here. Some [charts] are also included below, generated from [sheets].
+here. [Nsight Compute] profile results are saved in [prof](prof/). Some [charts]
+are also included below, generated from [sheets]. This experiment was done with
+guidance from [Prof. Dip Sankar Banerjee] and [Prof. Kishore Kothapalli].
 
 <br>
 
@@ -59,9 +61,13 @@ $ ./a.out
 ```
 
 [![](https://i.imgur.com/bGUUPot.gif)][sheets]
+[![](https://i.imgur.com/eLQ7XpP.gif)][sheets]
 [![](https://i.imgur.com/IagoPuk.gif)][sheets]
+[![](https://i.imgur.com/4L394Vk.gif)][sheets]
 [![](https://i.imgur.com/tCUuW0a.gif)][sheets]
+[![](https://i.imgur.com/tZaV8K6.gif)][sheets]
 [![](https://i.imgur.com/U6jbPeH.gif)][sheets]
+[![](https://i.imgur.com/mpjbvkK.gif)][sheets]
 
 <br>
 <br>
@@ -69,12 +75,15 @@ $ ./a.out
 
 ## References
 
-- [CUDA by Example :: Jason Sanders, Edward Kandrot](http://www.mat.unimi.it/users/sansotte/cuda/CUDA_by_Example.pdf)
+- [CUDA by Example :: Jason Sanders, Edward Kandrot](https://www.slideshare.net/SubhajitSahu/cuda-by-example-notes)
 
 <br>
 <br>
 
 [![](https://i.imgur.com/lRwvZLe.png)](https://www.youtube.com/watch?v=vTdodyhhjww)
 
+[Prof. Dip Sankar Banerjee]: https://sites.google.com/site/dipsankarban/
+[Prof. Kishore Kothapalli]: https://cstar.iiit.ac.in/~kkishore/
+[Nsight Compute]: https://developer.nvidia.com/nsight-compute
 [charts]: https://photos.app.goo.gl/xorYb1MZSNqxUgNy7
 [sheets]: https://docs.google.com/spreadsheets/d/1fWcVNQbANgiNepryktAsIWUHCNiAi-Yf1qQyiLsTJio/edit?usp=sharing
