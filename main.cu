@@ -9,8 +9,8 @@ using namespace std;
 
 
 void runMultiply(int N, int repeat) {
-  vector<float> a1(N), a2(N);
-  vector<float> x(N), y(N);
+  vector<double> a1(N), a2(N);
+  vector<double> x(N), y(N);
   for (int i=0; i<N; i++) {
     x[i] = 1.0/(i+1);
     y[i] = 1.0/(i+1);

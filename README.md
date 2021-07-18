@@ -5,7 +5,7 @@ Two floating-point vector `x` and `y`, with no. of **elements** `1E+6` to
 various **CUDA launch configs**, running each config 5 times to get a good
 time measure. Multiplication here represents any memory-aligned independent
 operation. Using a **large** `grid_limit` and a `block_size` of **256** could
-be a decent choice.
+be a decent choice (for both **float** and **double**).
 
 All outputs are saved in [out](out/) and a small part of the output is listed
 here. [Nsight Compute] profile results are saved in [prof](prof/). Some [charts]
