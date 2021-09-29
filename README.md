@@ -1,11 +1,13 @@
 Comparing various launch configs for CUDA based vector multiply.
 
-Two floating-point vector `x` and `y`, with no. of **elements** `1E+6` to
-`1E+9` were multiplied using CUDA. Each no. of elements was attempted with
-various **CUDA launch configs**, running each config 5 times to get a good
-time measure. Multiplication here represents any memory-aligned independent
-operation. Using a **large** `grid_limit` and a `block_size` of **256** could
-be a decent choice (for both **float** and **double**).
+Two floating-point vectors `x` and `y`, with number of **elements** from
+`1E+6` to `1E+9` were multiplied using CUDA. Each element count was attempted
+with various **CUDA launch configs**, running each config 5 times to get a
+good time measure. Multiplication here represents any memory-aligned independent
+operation, or a `map()` operation. Results indicate that a **grid_limit** of
+`16384/32768`, and a **block_size** of `128/256` to be suitable for both
+**float** and **double**. Using a **grid_limit** of `MAX` and a **block_size**
+of `256` could be a decent choice.
 
 All outputs are saved in [out](out/) and a small part of the output is listed
 here. [Nsight Compute] profile results are saved in [prof](prof/). Some [charts]
@@ -60,14 +62,22 @@ $ ./a.out
 # [00014.947 ms] [1.644725] multiplyCuda<<<32768, 1024>>>
 ```
 
-[![](https://i.imgur.com/bGUUPot.gif)][sheets]
-[![](https://i.imgur.com/eLQ7XpP.gif)][sheets]
-[![](https://i.imgur.com/IagoPuk.gif)][sheets]
-[![](https://i.imgur.com/4L394Vk.gif)][sheets]
-[![](https://i.imgur.com/tCUuW0a.gif)][sheets]
-[![](https://i.imgur.com/tZaV8K6.gif)][sheets]
-[![](https://i.imgur.com/U6jbPeH.gif)][sheets]
-[![](https://i.imgur.com/mpjbvkK.gif)][sheets]
+[![](https://i.imgur.com/bGUUPot.gif)][sheetp]
+[![](https://i.imgur.com/eLQ7XpP.gif)][sheetp]
+
+[![](https://i.imgur.com/IagoPuk.gif)][sheetp]
+[![](https://i.imgur.com/4L394Vk.gif)][sheetp]
+
+[![](https://i.imgur.com/tCUuW0a.gif)][sheetp]
+[![](https://i.imgur.com/tZaV8K6.gif)][sheetp]
+
+[![](https://i.imgur.com/U6jbPeH.gif)][sheetp]
+[![](https://i.imgur.com/mpjbvkK.gif)][sheetp]
+
+[![](https://i.imgur.com/ojDJOqU.png)][sheetp]
+[![](https://i.imgur.com/ROzJhzW.png)][sheetp]
+[![](https://i.imgur.com/DFsK3L6.png)][sheetp]
+[![](https://i.imgur.com/GZyYWjC.png)][sheetp]
 
 <br>
 <br>
@@ -87,3 +97,4 @@ $ ./a.out
 [Nsight Compute]: https://developer.nvidia.com/nsight-compute
 [charts]: https://photos.app.goo.gl/xorYb1MZSNqxUgNy7
 [sheets]: https://docs.google.com/spreadsheets/d/1fWcVNQbANgiNepryktAsIWUHCNiAi-Yf1qQyiLsTJio/edit?usp=sharing
+[sheetp]: https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5RS676pMmWtXRj0AaPSkBDdFHZWTEDgyMJGDq2mdSz7GfWektVErY130Y84eTAxuCMDGogdvLEzyZ/pubhtml
