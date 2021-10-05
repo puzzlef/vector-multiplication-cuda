@@ -3,7 +3,7 @@ const os = require('os');
 const path = require('path');
 
 const RELEMS = /^# Elements (.+)/m;
-const RRESLT = /^\[(.+?) ms\] \[(.+?)\] (\w+)(?:<<<\?, (\d+)>>> \[thead-duty=(\d+)\])?/m;
+const RRESLT = /^\[(.+?) ms\] \[(.+?)\] (\w+)(?:<<<auto, (\d+)>>> \[thead-duty=(\d+)\])?/m;
 const RPSUMM = /^(.+?),(.+?),(.+?),(.+?),"(.+?)",(.+?),(.+?),(.+)/m;
 const RPTECH = /^multiplyCuda/m;
 

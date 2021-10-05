@@ -7,6 +7,7 @@ using namespace std;
 
 
 
+
 #define TYPE float
 
 
@@ -26,7 +27,7 @@ void runMultiply(int N, int repeat) {
   for (int block=32; block<=BLOCK_LIMIT; block*=2) {
     for (int duty=1; duty<=64; duty+=ceilDiv(prevPow2(duty), 2)) {
       float t2 = multiplyCuda(a2, x, y, {repeat, block, duty});
-      printf("[%09.3f ms] [%f] multiplyCuda<<<?, %d>>> [thread-duty=%d]\n", t2, sum(a2), block, duty);
+      printf("[%09.3f ms] [%f] multiplyCuda<<<auto, %d>>> [thread-duty=%d]\n", t2, sum(a2), block, duty);
     }
   }
 }
