@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-src="multiply-cuda-adjust-launch"
+src="multiply-cuda-adjust-duty"
 out="/home/resources/Documents/subhajit/$src.log"
 ulimit -s unlimited
 printf "" > "$out"

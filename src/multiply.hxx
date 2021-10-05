@@ -6,9 +6,9 @@
 
 struct MultiplyOptions {
   int repeat;
-  int gridLimit;
   int blockSize;
+  int threadDuty;
 
-  MultiplyOptions(int repeat=1, int gridLimit=GRID_LIMIT, int blockSize=BLOCK_LIMIT) :
-  repeat(repeat), gridLimit(gridLimit), blockSize(blockSize) {}
+  MultiplyOptions(int repeat=1, int blockSize=BLOCK_LIMIT, int threadDuty=1) :
+  repeat(repeat), blockSize(blockSize), threadDuty(threadDuty) {}
 };

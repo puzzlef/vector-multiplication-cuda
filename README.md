@@ -1,4 +1,4 @@
-Comparing various launch configs for CUDA based vector multiply.
+Comparing various **per-thread duty** numbers for *CUDA based vector multiply*.
 
 Two floating-point vectors `x` and `y`, with number of **elements** from
 `1E+6` to `1E+9` were multiplied using CUDA. Each element count was attempted

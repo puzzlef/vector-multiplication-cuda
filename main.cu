@@ -23,10 +23,10 @@ void runMultiply(int N, int repeat) {
   printf("[%09.3f ms] [%f] multiplySeq\n", t1, sum(a1));
 
   // Find x*y accelerated using CUDA.
-  for (int grid=1024; grid<=GRID_LIMIT; grid*=2) {
-    for (int block=32; block<=BLOCK_LIMIT; block*=2) {
+  for (int block=32; block<=BLOCK_LIMIT; block*=2) {
+    for (int duty=1; duty<=64; duty+=ceilDiv(prevPow2(duty), 2)) {
       float t2 = multiplyCuda(a2, x, y, {repeat, grid, block});
-      printf("[%09.3f ms] [%f] multiplyCuda<<<%d, %d>>>\n", t2, sum(a2), grid, block);
+      printf("[%09.3f ms] [%f] multiplyCuda<<<?, %d>>> [thread-duty=%d]\n", t2, sum(a2), block, duty);
     }
   }
 }

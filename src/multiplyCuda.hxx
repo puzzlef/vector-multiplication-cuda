@@ -25,7 +25,7 @@ __global__ void multiplyKernel(T *a, T *x, T* y, int N) {
 template <class T>
 float multiplyCuda(T *a, const T *x, const T *y, int N, const MultiplyOptions& o={}) {
   int B = o.blockSize;
-  int G = min(ceilDiv(N, B), o.gridLimit);
+  int G = min(ceilDiv(N, B*o.threadDuty), GRID_LIMIT);
   size_t N1 = N * sizeof(T);
 
   T *aD, *xD, *yD;
