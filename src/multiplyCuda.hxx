@@ -18,7 +18,6 @@ __device__ void multiplyKernelLoop(T *a, T *x, T *y, int N, int i, int DI) {
 template <class T>
 __global__ void multiplyKernel(T *a, T *x, T* y, int N) {
   DEFINE(t, b, B, G);
-
   multiplyKernelLoop(a, x, y, N, B*b+t, G*B);
 }
 

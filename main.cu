@@ -7,10 +7,12 @@ using namespace std;
 
 
 
+#define TYPE float
+
 
 void runMultiply(int N, int repeat) {
-  vector<double> a1(N), a2(N);
-  vector<double> x(N), y(N);
+  vector<TYPE> a1(N), a2(N);
+  vector<TYPE> x(N), y(N);
   for (int i=0; i<N; i++) {
     x[i] = 1.0/(i+1);
     y[i] = 1.0/(i+1);

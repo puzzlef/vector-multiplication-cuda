@@ -13,9 +13,9 @@ using std::exit;
 // LAUNCH CONFIG
 // -------------
 
-// For regular data
+// Limits
 #define BLOCK_LIMIT 1024
-#define GRID_LIMIT  32768
+#define GRID_LIMIT  65535
 
 
 
@@ -84,7 +84,7 @@ template <class T>
 __device__ void unusedCuda(T&&) {}
 
 #ifndef UNUSED_CUDA
-#define UNUSED_CUDA(...) ARG_CALL(unusedCuda, ##__VA_ARGS__)
+#define UNUSED_CUDA(x) unusedCuda(x)
 #endif
 
 #ifndef UNUSED
