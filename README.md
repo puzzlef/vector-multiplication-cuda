@@ -22,44 +22,46 @@ $ ./a.out
 
 # ...
 #
-# # Elements 1e+09
-# [00279.861 ms] [1.644725] multiplySeq
-# [00021.842 ms] [1.644725] multiplyCuda<<<1024, 32>>>
-# [00017.829 ms] [1.644725] multiplyCuda<<<1024, 64>>>
-# [00016.707 ms] [1.644725] multiplyCuda<<<1024, 128>>>
-# [00016.216 ms] [1.644725] multiplyCuda<<<1024, 256>>>
-# [00016.468 ms] [1.644725] multiplyCuda<<<1024, 512>>>
-# [00015.225 ms] [1.644725] multiplyCuda<<<1024, 1024>>>
-# [00017.614 ms] [1.644725] multiplyCuda<<<2048, 32>>>
-# [00016.934 ms] [1.644725] multiplyCuda<<<2048, 64>>>
-# [00016.197 ms] [1.644725] multiplyCuda<<<2048, 128>>>
-# [00016.401 ms] [1.644725] multiplyCuda<<<2048, 256>>>
-# [00015.286 ms] [1.644725] multiplyCuda<<<2048, 512>>>
-# [00014.966 ms] [1.644725] multiplyCuda<<<2048, 1024>>>
-# [00017.428 ms] [1.644725] multiplyCuda<<<4096, 32>>>
-# [00016.449 ms] [1.644725] multiplyCuda<<<4096, 64>>>
-# [00016.333 ms] [1.644725] multiplyCuda<<<4096, 128>>>
-# [00015.280 ms] [1.644725] multiplyCuda<<<4096, 256>>>
-# [00014.963 ms] [1.644725] multiplyCuda<<<4096, 512>>>
-# [00014.966 ms] [1.644725] multiplyCuda<<<4096, 1024>>>
-# [00017.452 ms] [1.644725] multiplyCuda<<<8192, 32>>>
-# [00016.389 ms] [1.644725] multiplyCuda<<<8192, 64>>>
-# [00015.245 ms] [1.644725] multiplyCuda<<<8192, 128>>>
-# [00014.981 ms] [1.644725] multiplyCuda<<<8192, 256>>>
-# [00014.915 ms] [1.644725] multiplyCuda<<<8192, 512>>>
-# [00014.742 ms] [1.644725] multiplyCuda<<<8192, 1024>>>
-# [00016.345 ms] [1.644725] multiplyCuda<<<16384, 32>>>
-# [00015.224 ms] [1.644725] multiplyCuda<<<16384, 64>>>
-# [00014.988 ms] [1.644725] multiplyCuda<<<16384, 128>>>
-# [00014.989 ms] [1.644725] multiplyCuda<<<16384, 256>>>
-# [00014.764 ms] [1.644725] multiplyCuda<<<16384, 512>>>
-# [00014.568 ms] [1.644725] multiplyCuda<<<16384, 1024>>>
-# [00015.970 ms] [1.644725] multiplyCuda<<<32768, 32>>>
-# [00015.009 ms] [1.644725] multiplyCuda<<<32768, 64>>>
-# [00014.963 ms] [1.644725] multiplyCuda<<<32768, 128>>>
-# [00014.816 ms] [1.644725] multiplyCuda<<<32768, 256>>>
-# [00014.594 ms] [1.644725] multiplyCuda<<<32768, 512>>>
-# [00014.947 ms] [1.644725] multiplyCuda<<<32768, 1024>>>
+# # Elements 1e+07
+# [00002.138 ms] [1.644725] multiplySeq
+# [00000.243 ms] [1.644725] multiplyCuda<<<1024, 32>>>
+# [00000.179 ms] [1.644725] multiplyCuda<<<1024, 64>>>
+# [00000.170 ms] [1.644725] multiplyCuda<<<1024, 128>>>
+# [00000.169 ms] [1.644725] multiplyCuda<<<1024, 256>>>
+# [00000.172 ms] [1.644725] multiplyCuda<<<1024, 512>>>
+# [00000.168 ms] [1.644725] multiplyCuda<<<1024, 1024>>>
+# [00000.181 ms] [1.644725] multiplyCuda<<<2048, 32>>>
+# [00000.171 ms] [1.644725] multiplyCuda<<<2048, 64>>>
+# [00000.170 ms] [1.644725] multiplyCuda<<<2048, 128>>>
+# [00000.170 ms] [1.644725] multiplyCuda<<<2048, 256>>>
+# [00000.168 ms] [1.644725] multiplyCuda<<<2048, 512>>>
+# [00000.162 ms] [1.644725] multiplyCuda<<<2048, 1024>>>
+# [00000.186 ms] [1.644725] multiplyCuda<<<4096, 32>>>
+# [00000.169 ms] [1.644725] multiplyCuda<<<4096, 64>>>
+# [00000.172 ms] [1.644725] multiplyCuda<<<4096, 128>>>
+# [00000.167 ms] [1.644725] multiplyCuda<<<4096, 256>>>
+# [00000.168 ms] [1.644725] multiplyCuda<<<4096, 512>>>
+# [00000.167 ms] [1.644725] multiplyCuda<<<4096, 1024>>>
+# [00000.189 ms] [1.644725] multiplyCuda<<<8192, 32>>>
+# [00000.171 ms] [1.644725] multiplyCuda<<<8192, 64>>>
+# [00000.169 ms] [1.644725] multiplyCuda<<<8192, 128>>>
+# [00000.166 ms] [1.644725] multiplyCuda<<<8192, 256>>>
+# [00000.167 ms] [1.644725] multiplyCuda<<<8192, 512>>>
+# [00000.168 ms] [1.644725] multiplyCuda<<<8192, 1024>>>
+# [00000.181 ms] [1.644725] multiplyCuda<<<16384, 32>>>
+# [00000.168 ms] [1.644725] multiplyCuda<<<16384, 64>>>
+# [00000.167 ms] [1.644725] multiplyCuda<<<16384, 128>>>
+# [00000.166 ms] [1.644725] multiplyCuda<<<16384, 256>>>
+# [00000.167 ms] [1.644725] multiplyCuda<<<16384, 512>>>
+# [00000.168 ms] [1.644725] multiplyCuda<<<16384, 1024>>>
+# [00000.184 ms] [1.644725] multiplyCuda<<<32768, 32>>>
+# [00000.168 ms] [1.644725] multiplyCuda<<<32768, 64>>>
+# [00000.167 ms] [1.644725] multiplyCuda<<<32768, 128>>>
+# [00000.166 ms] [1.644725] multiplyCuda<<<32768, 256>>>
+# [00000.166 ms] [1.644725] multiplyCuda<<<32768, 512>>>
+# [00000.169 ms] [1.644725] multiplyCuda<<<32768, 1024>>>
+#
+# ...
 ```
 
 [![](https://i.imgur.com/bGUUPot.gif)][sheetp]
@@ -74,10 +76,10 @@ $ ./a.out
 [![](https://i.imgur.com/U6jbPeH.gif)][sheetp]
 [![](https://i.imgur.com/mpjbvkK.gif)][sheetp]
 
-[![](https://i.imgur.com/ojDJOqU.png)][sheetp]
-[![](https://i.imgur.com/ROzJhzW.png)][sheetp]
-[![](https://i.imgur.com/DFsK3L6.png)][sheetp]
-[![](https://i.imgur.com/GZyYWjC.png)][sheetp]
+[![](https://i.imgur.com/TVSzgPr.png)][sheetp]
+[![](https://i.imgur.com/edMTlIA.png)][sheetp]
+[![](https://i.imgur.com/g5oxQ1H.png)][sheetp]
+[![](https://i.imgur.com/1Jyepy2.png)][sheetp]
 
 <br>
 <br>
