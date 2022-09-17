@@ -83,6 +83,7 @@ $ ./a.out
 <br>
 
 [![](https://i.imgur.com/lRwvZLe.png)](https://www.youtube.com/watch?v=vTdodyhhjww)
+[![ORG](https://img.shields.io/badge/org-puzzlef-green?logo=Org)](https://puzzlef.github.io)
 [![DOI](https://zenodo.org/badge/375073607.svg)](https://zenodo.org/badge/latestdoi/375073607)
 
 [Prof. Dip Sankar Banerjee]: https://sites.google.com/site/dipsankarban/
