@@ -1,8 +1,18 @@
 Comparing various launch configs for CUDA based vector multiply.
 
-Two floating-point vectors `x` and `y`, with number of **elements** from `1E+6` to `1E+9` were multiplied using CUDA. Each element count was attempted with various **CUDA launch configs**, running each config 5 times to get a good time measure. Multiplication here represents any memory-aligned independent operation, or a `map()` operation. Results indicate that a **grid_limit** of `16384/32768`, and a **block_size** of `128/256` to be suitable for both **float** and **double**. Using a **grid_limit** of `MAX` and a **block_size** of `256` could be a decent choice.
+Two floating-point vectors `x` and `y`, with number of **elements** from `1E+6`
+to `1E+9` were multiplied using CUDA. Each element count was attempted with
+various **CUDA launch configs**, running each config 5 times to get a good time
+measure. Multiplication here represents any memory-aligned independent
+operation, or a `map()` operation. Results indicate that a **grid_limit** of
+`16384/32768`, and a **block_size** of `128/256` to be suitable for both
+**float** and **double**. Using a **grid_limit** of `MAX` and a **block_size**
+of `256` could be a decent choice.
 
-All outputs are saved in [out](out/) and a small part of the output is listed here. [Nsight Compute] profile results are saved in [prof](prof/). Some [charts] are also included below, generated from [sheets]. This experiment was done with guidance from [Prof. Dip Sankar Banerjee] and [Prof. Kishore Kothapalli].
+All outputs for [float] and [double], and [Nsight Compute] [profile] results are
+saved in *gists*. Some [charts] are also included below, generated from
+[sheets]. This experiment was done with guidance from [Prof. Dip Sankar Banerjee]
+and [Prof. Kishore Kothapalli].
 
 <br>
 
@@ -89,6 +99,9 @@ $ ./a.out
 [Prof. Dip Sankar Banerjee]: https://sites.google.com/site/dipsankarban/
 [Prof. Kishore Kothapalli]: https://cstar.iiit.ac.in/~kkishore/
 [Nsight Compute]: https://developer.nvidia.com/nsight-compute
+[float]: https://gist.github.com/wolfram77/e0da13737042a717d0ae9ca9b9a182c6
+[double]: https://gist.github.com/wolfram77/701c2691de0cc0cb75839c8b374f0c4e
+[profile]: https://gist.github.com/wolfram77/65e3e1a0d841c8f15b02ba3db28dd79e
 [charts]: https://photos.app.goo.gl/xorYb1MZSNqxUgNy7
 [sheets]: https://docs.google.com/spreadsheets/d/1fWcVNQbANgiNepryktAsIWUHCNiAi-Yf1qQyiLsTJio/edit?usp=sharing
 [sheetp]: https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5RS676pMmWtXRj0AaPSkBDdFHZWTEDgyMJGDq2mdSz7GfWektVErY130Y84eTAxuCMDGogdvLEzyZ/pubhtml
