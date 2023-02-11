@@ -7,9 +7,9 @@ config 5 times to get a good time measure. Multiplication here represents any
 memory-aligned independent operation, or a `map()` operation. Results indicate
 no significant difference between [launch adjust] approach, and this one.
 
-All outputs are saved in [out](out/) and a small part of the output is listed
-here. This experiment was done with guidance from [Prof. Dip Sankar Banerjee]
-and [Prof. Kishore Kothapalli].
+All outputs for [float] and [double] are saved in *gists* and a small part of
+the output is listed here. This experiment was done with guidance from
+[Prof. Dip Sankar Banerjee] and [Prof. Kishore Kothapalli].
 
 <br>
 
@@ -114,4 +114,6 @@ $ ./a.out
 
 [Prof. Dip Sankar Banerjee]: https://sites.google.com/site/dipsankarban/
 [Prof. Kishore Kothapalli]: https://cstar.iiit.ac.in/~kkishore/
-[launch adjust]: https://github.com/puzzlef/multiply-cuda-adjust-launch
+[launch adjust]: https://github.com/puzzlef/vector-multiply-cuda
+[float]: https://gist.github.com/wolfram77/6b68c212bc06f67d8afb18270e8865a8
+[double]: https://gist.github.com/wolfram77/fb5280044ca2d844158c36ce2afebdf0
